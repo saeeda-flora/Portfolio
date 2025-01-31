@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saeeda Sultana Flora - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background: #0d0d0d;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            overflow-x: hidden;
+        }
+        body.light-mode {
+            background: #f5f5f5;
+            color: #0d0d0d;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: #141414;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff4d4d;
+        }
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        .light-mode .theme-toggle {
+            color: #0d0d0d;
+        }
+        .theme-toggle i {
+            font-size: 30px;
+        }
+        .page {
+            display: none;
+            padding: 100px 18%;
+            text-align: center;
+        }
+        .active {
+            display: block;
+        }
+        .hero-img {
+            position: relative;
+            z-index: 1;
+            width: 400px;
+            height: 450px;
+            background: #1a1a1a;
+            padding: 20px;
+            clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+        }
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+            width: 300px;
+            font-size: 1.2rem;
+            color: black; 
+        }
+        .skill i {
+            font-size: 3.5rem;
+            color: #ff4d4d;
+        }
+        .skill:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #141414;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+                <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <section id="about" class="page active">
+        <h2>About Me</h2>
+        <div class="hero-img">
+            <img src="Flora.jpg" alt="Saeeda Sultana Flora">
+            
+        </div>
+        <p>Currently pursuing my graduation in **Forestry and Environmental Science** at **Shahjalal University of Science and Technology, Sylhet**. Passionate about web development, design, and entrepreneurship.</p>
+    </section>
+    
+    <section id="skills" class="page">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill"><i class="fab fa-html5"></i> <strong>HTML & CSS</strong><br>Building clean and responsive web pages.</div>
+            <div class="skill"><i class="fab fa-js"></i> <strong>JavaScript</strong><br>Adding interactivity and dynamic content to websites.</div>
+            <div class="skill"><i class="fab fa-react"></i> <strong>React.js</strong><br>Creating modular and scalable front-end applications.</div>
+            <div class="skill"><i class="fas fa-file-powerpoint"></i> <strong>PowerPoint</strong><br>Creating professional and engaging presentations.</div>
+            <div class="skill"><i class="fas fa-file-excel"></i> <strong>Excel</strong><br>Managing data, charts, and reports efficiently.</div>
+            <div class="skill"><i class="fas fa-palette"></i> <strong>UI/UX Design</strong><br>Designing intuitive and visually appealing user interfaces.</div>
+        </div>
+    </section>
+    
+    <section id="projects" class="page">
+        <h2>My Projects</h2>
+        <p style="margin-top: 40px;">🌐 **Portfolio Website** – A showcase of my web development skills.</p>
+    </section>
+    
+    <section id="contact" class="page">
+        <h2>Contact Me</h2>
+        <p style="margin-top: 40px;">Email: <a href="mailto:saeedasultanaflora.1@gmail.com">saeedasultanaflora.1@gmail.com</a></p>
+        <p style="margin-top: 20px;">LinkedIn: <a href="https://www.linkedin.com/in/saeeda-sultana-flora-15417520a/" target="_blank">View My Profile</a></p>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Saeeda Sultana Flora. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const themeToggle = document.querySelector('.theme-toggle i');
+            themeToggle.classList.toggle('fa-moon');
+            themeToggle.classList.toggle('fa-sun');
+        }
+    </script>
+</body>
+</html>
